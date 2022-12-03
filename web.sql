@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 30, 2022 lúc 02:20 PM
--- Phiên bản máy phục vụ: 10.4.25-MariaDB
--- Phiên bản PHP: 8.1.10
+-- Thời gian đã tạo: Th12 03, 2022 lúc 01:43 PM
+-- Phiên bản máy phục vụ: 10.4.27-MariaDB
+-- Phiên bản PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `webbanhang`
+-- Cơ sở dữ liệu: `web`
 --
 
 -- --------------------------------------------------------
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `donhang` (
   `idDonhang` int(10) UNSIGNED NOT NULL,
-  `Username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `Username` varchar(255) NOT NULL,
   `idNhanhang` int(10) UNSIGNED NOT NULL,
   `idSanpham` int(10) UNSIGNED NOT NULL,
   `Ngaytaodonhang` datetime NOT NULL,
@@ -43,11 +43,19 @@ CREATE TABLE `donhang` (
 --
 
 CREATE TABLE `khachhang` (
-  `Username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `Username` varchar(255) NOT NULL,
   `Password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `Diachi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Sdt` int(11) NOT NULL
+  `Sdt` int(11) NOT NULL,
+  `Hoten` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `khachhang`
+--
+
+INSERT INTO `khachhang` (`Username`, `Password`, `Diachi`, `Sdt`, `Hoten`) VALUES
+('voduylong1106@gmail.com', '123', 'An Dương Vương', 954234, 'Võ Duy Long');
 
 -- --------------------------------------------------------
 
@@ -152,7 +160,7 @@ ALTER TABLE `sanpham`
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `idDonhang` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `idDonhang` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `nhanhang`
