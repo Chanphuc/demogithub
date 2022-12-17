@@ -27,37 +27,23 @@
                 </a>
               </li>
               <li>
-                <a href="">
-                  <img src="images/icon3.PNG">
-                  Tôi bán
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="images/icon3.PNG">
-                  Chat
-                </a>
-              </li>
-              <li>
-                <a href="">
+                <a href="./lienhe.php">
                   <img src="images/icon4.PNG">
-                  Thông báo
+                  Liên Hệ
                 </a>
               </li>
               <li>
-                <a href="">
-                  <img src="images/icon5.PNG">
-                  Thêm
-                </a>
+              <a href="giohang.php">
+                <i class="fa-solid fa-cart-shopping" style="cursor: pointer; color: #000; padding-right: 10px"></i>
+                Giỏ Hàng
+              </a>
               </li>
             </ul>
             <div class="cart-login">
-              <a href="giohang.php">
-                <i class="fa-solid fa-cart-shopping" style="cursor: pointer; color: #000"></i>
-              </a>
               <div class="login-card">
                 <?php
                   if(isset($_SESSION['username'])){
+                    echo '<i class="fa-solid fa-user" style="padding-right: 10px"></i>';
                     echo $_SESSION['username'];
                     echo '<a href="?dangxuat=1">
                           <p class="login-text" style="color: #000;">Đăng Xuất</p>
@@ -79,7 +65,7 @@
           </div>
           <div class="down">
             <div class="search">
-              <input type="" name="" placeholder="Tìm kiếm">
+              <input type="" class="header__search" name="" placeholder="Tìm kiếm">
               <button>
                 <img src="images/search.png">
               </button>
@@ -87,3 +73,5 @@
           </div>
         </div>
       </div>
+
+      <!-- <script src="./js/search.js"></script> -->

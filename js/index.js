@@ -17,3 +17,27 @@ ListItem.addEventListener('change', function() {
     }
 })
 
+// tim kiếm
+const searchInput = document.querySelector('.header__search')
+
+searchInput.addEventListener('keyup', function(){
+    // displayAllProduct()
+   var searchVal = searchInput.value
+   for(const product of products){
+        var productName = product.querySelector('.products-name').innerText.toLowerCase();
+        if(productName.toLowerCase().indexOf(searchVal) > -1){
+            if(product.getAttribute("data") == ListItem.value)
+                product.style.display = ""
+        }
+        else product.style.display = "none"
+   }
+})
+
+function displayAllProduct(){
+    if(searchInput.value.length == 0){
+        for(const product of products){
+            product.style.display = ""
+       }
+    }
+}
+

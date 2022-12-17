@@ -57,7 +57,7 @@ for(const closeModal of closeModals){
    })
 }
 
-//Hafnh vi nổi bọt của modal
+//xử lý hành vi nổi bọt của modal
 const popup = document.querySelector('.popup')
 modal.addEventListener('click', function() {
    modal.style.visibility = "hidden"
