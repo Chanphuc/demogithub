@@ -18,7 +18,7 @@
 
 	</head>
   <body>
-		<div class="container">
+		<div class="container s">
 			
 		<?php require_once './header.php' ?>
 		<div class="bg-light py-5">
