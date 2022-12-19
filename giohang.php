@@ -26,7 +26,7 @@
 ?>
 
 <main role="main">
-    <div class="container mt-4">
+    <div class="container mt-4 test2">
         <div id="thongbao" class="alert alert-danger d-none face" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">×</span>
